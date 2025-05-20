@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: zero-plug-analysis-mongo
+    volumes:
+      - analysis_mongo_data:/data/db
+    ports:
+      - "27073:27017"
+    environment:
+      MONGO_INITDB_DATABASE: analysis
+
+volumes:
+  analysis_mongo_data:

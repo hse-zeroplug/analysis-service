@@ -1,6 +1,21 @@
 spring:
   application:
     name: analysis-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27073
+      database: analysis
 
 server:
   port: 8092
+
+internal:
+  dir: ./storage
+
+wordCloud:
+  host: quickchart.io
+  path: /wordcloud
+
+storageService:
+  baseUrl: http://localhost:8091
